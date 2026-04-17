@@ -2,31 +2,25 @@
 Multi-criteria spatial analysis ti identify suitable areas for utility scale solar PV installationsin the Lazio region (Central Italy), developed using GEE and open geospatial datasets.
 workflow replicates and automates the environmental screening process typically performed during renewable energy project origination and envirinmental permititng in Italy
 
-Methodology
 
-Dataset -> Source -> Resolution -> Purpose
+### Datasets
+| Dataset | Source | Resolution | Purpose |
+|---------|--------|-----------|---------|
+| SRTM DEM | USGS | 30m | Slope calculation |
+| ESA WorldCover 2021 | ESA/Copernicus | 10m | Land cover classification |
+| WDPA | WCMC/UNEP | vector | Protected areas exclusion |
+| GAUL Level 1 | FAO | vector | Administrative boundary |
 
-GAUL Level -> FAO -> vector -> administrative boudaries
 
-ESA WorldCover 2021 -> ESA/Copernicus -> 10 m -> land cover
-
-WDPA -> WCMC/UNEP -> vector -> protected areas
-
-Suitability criteria
-
-Criterion -> thereshold -> legal/tecnical basis
-
-slope-> < 5­° -> tecnical standart
-
-forest -> excluded -> environmental constraints
-
-urban areas -> excluded -> habitat protection
-
-water bodies -> excluded -> tecnical and safety constraints
-
-wetlands-> excluded -> habitat protection
-
-protection areas -> excluded -> Natura 2000, national/region parks, Ramsar
+### Suitability Criteria
+| Criterion | Threshold | Legal/Technical Basis |
+|-----------|-----------|----------------------|
+| Slope | < 5° | Technical standard for ground-mounted PV |
+| Forest | Excluded | Environmental constraints, D.Lgs 34/2018 |
+| Urban areas | Excluded | Land use planning constraints |
+| Water bodies | Excluded | Technical and safety constraints |
+| Wetlands | Excluded | Habitat protection |
+| Protected areas | Excluded | Natura 2000, National/Regional Parks, Ramsar |
 
 Protection areas coverage (WDPA)
 The WDPA layer used in this analysis covers all IUCN-classified 
